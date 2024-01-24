@@ -1,8 +1,6 @@
 import { ReactElement, useState } from "react";
 import { Link } from "react-router-dom";
-import { Column } from "react-table";
 import AdminSidebar from "../../components/admin/AdminSidebar";
-import TableHOC from "../../components/admin/TableHOC";
 
 interface DataType {
   user: string;
@@ -41,47 +39,14 @@ const arr: Array<DataType> = [
   },
 ];
 
-const columns: Column<DataType>[] = [
-  {
-    Header: "Avatar",
-    accessor: "user",
-  },
-  {
-    Header: "Amount",
-    accessor: "amount",
-  },
-  {
-    Header: "Discount",
-    accessor: "discount",
-  },
-  {
-    Header: "Quantity",
-    accessor: "quantity",
-  },
-  {
-    Header: "Status",
-    accessor: "status",
-  },
-  {
-    Header: "Action",
-    accessor: "action",
-  },
-];
 
 const Transaction = () => {
-  const [rows, setRows] = useState<DataType[]>(arr);
+  const [] = useState<DataType[]>(arr);
 
-  const Table = TableHOC<DataType>(
-    columns,
-    rows,
-    "dashboard-product-box",
-    "Transactions",
-    rows.length > 6
-  )();
+  
   return (
     <div className="admin-container">
       <AdminSidebar />
-      <main>{Table}</main>
     </div>
   );
 };
