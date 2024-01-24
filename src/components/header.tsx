@@ -34,9 +34,9 @@ const Header = () => {
           <dialog open={isOpen}>
             <div>
               {user.role === "admin" && (
-                <Link onClick={() => setIsOpen(false)} to="/admin/dashboard">Admin</Link>
+                <Link onClick={() => setIsOpen(false)} to="/admin/dashboard">AdminAdmin</Link>
               )}
-              <Link onClick={() => setIsOpen(false)} to="/orders">Orders</Link>
+              <Link onClick={() => setIsOpen(false)} to="/orders">OrdersOrders</Link>
               <button onClick={logoutHandler}>
                 <FaSignOutAlt />
               </button>
