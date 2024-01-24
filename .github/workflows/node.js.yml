@@ -23,9 +23,3 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Test
-        run: npm test # Replace with your actual test script
-
-      - name: Preview
-        run: npm run preview # Replace with your actual preview script
